@@ -14,7 +14,7 @@ const Card = ({ day, active, onClick }) => {
       </h1>
       <img
         className="h-16 w-16"
-        src={`http:${day.day.condition.icon}`}
+        src={`https:${day.day.condition.icon}`}
         alt="wheather logo"
       />
       <div className="flex gap-2 items-center mt-1">
