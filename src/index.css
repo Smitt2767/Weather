@@ -22,3 +22,8 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(75, 85, 99);
 }
+
+.recharts-surface {
+  position: absolute;
+  left: -57px;
+}
