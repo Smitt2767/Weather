@@ -10,7 +10,7 @@ const HourCard = ({ data }) => {
         </h1>
         <img
           className="h-16 w-16"
-          src={`http:${data.condition.icon}`}
+          src={`https:${data.condition.icon}`}
           alt="wheather logo"
         />
         <div className="flex flex-col text-white text-xs">
