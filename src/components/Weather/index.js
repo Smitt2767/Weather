@@ -29,7 +29,7 @@ const Weather = () => {
               <title>{data.location.name}</title>
               <link
                 rel="icon"
-                href={`http:${data.current.condition.icon}`}
+                href={`https:${data.current.condition.icon}`}
               ></link>
             </Helmet>
             <div className="flex-grow">
