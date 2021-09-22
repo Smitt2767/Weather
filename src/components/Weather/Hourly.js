@@ -7,9 +7,6 @@ const Hourly = () => {
   const { data, date } = useContext(WeatherContext);
   return (
     <>
-      <h1 className="text-white mb-2 tracking-widest text-2xl">
-        {moment(date).format("dddd")}
-      </h1>
       <div className="w-full flex gap-2 overflow-x-auto mb-10 py-2">
         {data.forecast.forecastday
           .find((data) => data.date === date)
