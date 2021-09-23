@@ -13,6 +13,9 @@ module.exports = {
         primary: "#E2560D",
         secondary: "#C83803",
       }),
+      fontFamily: {
+        body: ["Lato"],
+      },
     },
   },
   variants: {

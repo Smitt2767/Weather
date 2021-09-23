@@ -17,7 +17,7 @@ const App = () => {
   };
 
   return (
-    <div className="h-screen w-screen">
+    <div className="h-screen w-screen font-body">
       <Transition
         in={open}
         timeout={300}

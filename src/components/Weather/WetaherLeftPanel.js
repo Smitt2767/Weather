@@ -23,7 +23,7 @@ const WetaherLeftPanel = () => {
   return (
     <div className="h-full w-full relative">
       <div className="absolute bottom-24 w-full px-28">
-        <h1 className="mb-8 tracking-widest text-6xl text-white ">
+        <h1 className="mb-8 tracking-wider text-6xl text-white">
           {moment(date).format("dddd")}
         </h1>
         <Tabs data={tabsData} onClick={handleClick} activeTab={chartTab} />
