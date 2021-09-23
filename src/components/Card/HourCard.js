@@ -16,7 +16,7 @@ const HourCard = ({ data }) => {
         <div className="flex flex-col text-white text-xs">
           <div className="flex gap-2 items-center justify-between">
             <span>Temp</span>
-            <span>{data.temp_c}&#176;c</span>
+            <span>{data.temp_c}&#176;</span>
           </div>
           <div className="flex gap-2 items-center justify-between">
             <span>Humidity</span>

@@ -10,6 +10,7 @@ const tabsData = [
   { name: "temp", color: "#E7CFBF" },
   { name: "humidity", color: "#30C9E8" },
   { name: "cloud", color: "#66A1EE" },
+  { name: "rain", color: "#3080E8" },
 ];
 
 const WetaherLeftPanel = () => {
@@ -35,6 +36,7 @@ const WetaherLeftPanel = () => {
               temp: data.temp_c,
               humidity: data.humidity,
               cloud: data.cloud,
+              rain: data.chance_of_rain,
             }))}
           chartTab={chartTab}
         />
