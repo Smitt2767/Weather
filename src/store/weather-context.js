@@ -14,7 +14,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         data: payload,
-        date: payload.forecast.forecastday[0].date,
+        date: !state.date ? payload.forecast.forecastday[0].date : state.date,
       };
     }
     case "SETLOADING": {

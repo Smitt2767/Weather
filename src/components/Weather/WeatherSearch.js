@@ -15,9 +15,12 @@ const WeatherSearch = ({ location, onChange, onSubmit, isLoading }) => {
         />
       </div>
       <button
-        className="flex-none h-16 w-16 bg-primary hover:bg-secondary text-white flex items-center justify-center"
+        className={`flex-none h-16 w-16 bg-primary hover:bg-secondary text-white flex items-center justify-center ${
+          isLoading ? "cursor-wait" : ""
+        } disabled:bg-gray-300 disabled:bg-opacity-20`}
         type="submit"
         form="wheatherForm"
+        disabled={!location && !isLoading}
       >
         {!isLoading ? <AiOutlineSearch className="text-2xl" /> : <Circle />}
       </button>

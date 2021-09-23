@@ -31,7 +31,7 @@ const WetaherLeftPanel = () => {
             .find((data) => data.date === date)
             .hour.filter((data) => moment(data.time).isAfter(new Date()))
             .map((data) => ({
-              time: moment(data.time).format("h A"),
+              time: moment(data.time).format("ha"),
               temp: data.temp_c,
               humidity: data.humidity,
               cloud: data.cloud,
