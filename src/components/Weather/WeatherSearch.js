@@ -11,7 +11,7 @@ const WeatherSearch = ({ location, onChange, onSubmit, isLoading }) => {
           value={location}
           onChange={onChange}
           placeholder="Another Location"
-          className="bg-transparent focus:outline-none border-b-2 w-full py-1 text-xl text-gray-300 placeholder-gray-400 border-gray-400"
+          className="bg-transparent focus:outline-none border-b-2 w-full py-2 text-xl text-white placeholder-gray-400 border-gray-400 focus:border-white"
         />
       </div>
       <button

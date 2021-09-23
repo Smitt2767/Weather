@@ -57,7 +57,7 @@ const WetaherLeftPanel = () => {
             </p>
             <p className="text-gray-200 text-lg ">
               {moment(data.location.localtime).format(
-                "HH:mm - dddd, DD MMM 'YY"
+                "hh:mm a - dddd, DD MMM 'YY"
               )}
             </p>
           </div>

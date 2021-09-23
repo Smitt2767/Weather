@@ -1,9 +1,8 @@
-import React, { useState, useContext, useCallback, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import WeatherSearch from "./WeatherSearch";
 import { WeatherContext } from "../../store/weather-context";
 import WeatherDetails from "./WeatherDetails";
 import NextDays from "./NextDays";
-import _ from "lodash";
 import weatherApi from "../../services/weatherApi";
 import Locations from "./Locations";
 import RecentSearches from "./RecentSearches";
@@ -14,27 +13,24 @@ const WheatherRightPanel = () => {
   const [locations, setLocations] = useState([]);
   const { search, isLoading } = useContext(WeatherContext);
 
-  const searchLocations = async () => {
-    if (!location) {
-      setLocations([]);
-      return;
-    }
-    try {
-      const res = await weatherApi.get(`/search.json?q=${location}`);
-      if (res.status && res.data) {
-        setLocations(res.data.slice(0, 5));
-      }
-    } catch (err) {
-      setLocations([]);
-    }
-  };
-
-  const delayQuery = useCallback(_.debounce(searchLocations, 500), [location]);
-
   useEffect(() => {
-    delayQuery();
-    return () => delayQuery.cancel();
-  }, [delayQuery]);
+    const id = setTimeout(() => {
+      if (!location) setLocations([]);
+      else {
+        (async () => {
+          try {
+            const res = await weatherApi.get(`/search.json?q=${location}`);
+            if (res.status && res.data) {
+              setLocations(res.data.slice(0, 5));
+            }
+          } catch (err) {
+            setLocations([]);
+          }
+        })();
+      }
+    }, 500);
+    return () => clearTimeout(id);
+  }, [location]);
 
   const onInputValueChange = (e) => {
     setLocation(e.target.value);

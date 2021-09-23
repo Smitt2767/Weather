@@ -23,8 +23,8 @@ const HourCard = ({ data }) => {
             <span>{data.humidity}%</span>
           </div>
           <div className="flex gap-2 items-center justify-between">
-            <span>Cloud</span>
-            <span>{data.cloud}%</span>
+            <span>Rain</span>
+            <span>{data.chance_of_rain}%</span>
           </div>
         </div>
       </div>

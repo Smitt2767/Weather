@@ -19,7 +19,7 @@ const Chart = ({ data, chartTab }) => {
             <stop offset="95%" stopColor={chartTab.color} stopOpacity={0} />
           </linearGradient>
         </defs>
-        <XAxis dataKey="time" stroke="#fff" />
+        <XAxis dataKey="time" stroke="#fff" tickMargin={6} />
         <YAxis stroke="#fff" />
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
