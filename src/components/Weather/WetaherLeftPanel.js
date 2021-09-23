@@ -22,7 +22,7 @@ const WetaherLeftPanel = () => {
   return (
     <div className="h-full w-full relative">
       <div className="absolute bottom-24 w-full px-28">
-        <h1 className="text-white mb-8 tracking-widest text-6xl">
+        <h1 className="mb-8 tracking-widest text-6xl text-white ">
           {moment(date).format("dddd")}
         </h1>
         <Tabs data={tabsData} onClick={handleClick} activeTab={chartTab} />
@@ -59,7 +59,7 @@ const WetaherLeftPanel = () => {
               )}
             </p>
           </div>
-          <div className="flex flex-col items-center self-end flex-none">
+          <div className="flex flex-col items-end self-end flex-none">
             <img
               src={`https:${data.current.condition.icon}`}
               alt="wheather logo"

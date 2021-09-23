@@ -35,7 +35,7 @@ const Weather = () => {
             <div className="flex-grow">
               <WetaherLeftPanel />
             </div>
-            <div className="w-2/6 ">
+            <div className="w-3/12 ">
               <WeatherRightPanel />
             </div>
           </>

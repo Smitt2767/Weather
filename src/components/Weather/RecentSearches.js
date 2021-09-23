@@ -5,10 +5,15 @@ import { WeatherContext } from "../../store/weather-context";
 
 const RecentSearches = () => {
   const { weatherCacheData } = useContext(WeatherCacheContext);
-  const { setWeatherData } = useContext(WeatherContext);
+  const { setWeatherData, data } = useContext(WeatherContext);
 
-  const handleClick = (data) => {
-    setWeatherData(data);
+  const handleClick = (newData) => {
+    if (
+      newData.location.name !== data.location.name ||
+      newData.current.last_updated !== data.current.last_updated
+    ) {
+      setWeatherData(newData);
+    }
   };
 
   return (
