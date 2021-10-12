@@ -9,6 +9,10 @@ const App = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    console.log(process.env.NODE_ENV);
+  }, []);
+
+  useEffect(() => {
     if (!!errorMessage) setOpen(true);
   }, [errorMessage]);
 
